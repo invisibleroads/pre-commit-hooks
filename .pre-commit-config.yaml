@@ -1,0 +1,6 @@
+- id: clear-notebook-outputs
+  name: Clear Notebook Outputs
+  description: Clear output from Jupyter Notebooks
+  entry: clear-notebook-outputs.sh
+  language: script
+  types: [jupyter]
