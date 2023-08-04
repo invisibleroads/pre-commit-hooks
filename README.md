@@ -1,5 +1,7 @@
 # Pre-Commit Hooks
 
+- clear-notebook-outputs: clear outputs from jupyter notebooks
+
 ## Usage
 
 Add a file named `.pre-commit-config.yaml` to your repository with the following contents:
