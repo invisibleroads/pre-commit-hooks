@@ -4,3 +4,9 @@
   entry: clear-notebook-outputs.sh
   language: script
   types: [jupyter]
+- id: check-notebook-sources
+  name: check notebook sources
+  description: check sources from jupyter notebooks
+  entry: check-notebook-sources.sh
+  language: script
+  types: [jupyter]
