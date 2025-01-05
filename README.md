@@ -23,6 +23,10 @@ repos:
       - id: name-tests-test
       - id: requirements-txt-fixer
       - id: trailing-whitespace
+  - repo: https://github.com/invisibleroads/pre-commit-hooks
+    rev: 0.0.1
+    hooks:
+      - id: clear-notebook-outputs
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.7.0
     hooks:
@@ -32,10 +36,6 @@ repos:
         entry: nbqa pylama
         additional_dependencies: [pylama]
         types: [jupyter]
-  - repo: https://github.com/invisibleroads/pre-commit-hooks
-    rev: 0.0.1
-    hooks:
-      - id: clear-notebook-outputs
 ```
 
 Then install the hooks.
