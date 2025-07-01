@@ -10,16 +10,20 @@ Add a file named `.pre-commit-config.yaml` to your repository with the following
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: check-added-large-files
-      - id: check-docstring-first
+      - id: check-ast
+      - id: check-case-conflict
       - id: check-json
       - id: check-merge-conflict
+      - id: check-toml
       - id: check-yaml
       - id: debug-statements
+      - id: detect-private-key
       - id: double-quote-string-fixer
       - id: end-of-file-fixer
+      - id: mixed-line-ending
       - id: name-tests-test
       - id: requirements-txt-fixer
       - id: trailing-whitespace
@@ -28,14 +32,9 @@ repos:
     hooks:
       - id: clear-notebook-outputs
   - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.7.0
+    rev: 1.9.1
     hooks:
-      - id: nbqa
-        name: nbqa-pylama
-        description: check sources in jupyter notebooks
-        entry: nbqa pylama
-        additional_dependencies: [pylama]
-        types: [jupyter]
+      - id: nbqa-ruff
 ```
 
 Then install the hooks.
